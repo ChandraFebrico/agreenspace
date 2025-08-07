@@ -1,12 +1,14 @@
 import Image from "next/image";
 // pages/index.tsx
 import ThreeCanvasWrapper from '../components/ThreeCanvasWrapper'
+import ThreeCanvasWrapper2 from '../components/ThreeCanvasWrapper2'
+import ThreeCanvasWrapper3 from '../components/ThreeCanvasWrapper3'
 
 
 export default function Home() {
   return (
     <div>
-      <nav className="block sm:hidden flex justify-Round " style={{ padding: '20px' }} >
+      <nav className="block sm:hidden flex justify-around " style={{ padding: '20px' }} >
         <div className="flex justify-start">
           <img className="mx-auto block h-10 rounded-full sm:mx-0 sm:shrink-0" src="/img/home.jpg" alt="" />
         </div>
@@ -50,7 +52,7 @@ export default function Home() {
           </div>
         </nav>
       </div>
-      <div className="flex justify-center p-8 ">
+      <div className="flex justify-center p-8 -z-10">
         <div className="w-1/2 p-12 grid grid-flow-col grid-rows-3 gap-4 ">
           <div className="col-span-2">
             <p className="text-6xl"> We <a className="font-bold text-lime-600 underline decoration-lime-500/30"> Create</a>,<br />
@@ -67,13 +69,12 @@ export default function Home() {
             height={500} // Height in pixels
             className="rounded-md" src="/img/1.jpg" ></img>
         </div>
-        <div>
-
+      </div>
+      <div className=" flex justify-end -mt-56">
+        <div className="w-1/3 justify-items-center">
+          <ThreeCanvasWrapper />
         </div>
       </div>
-      <main>
-        <ThreeCanvasWrapper />
-      </main>
     </div>
   );
 }
