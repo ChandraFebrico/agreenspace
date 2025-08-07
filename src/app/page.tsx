@@ -1,4 +1,4 @@
-
+import Image from 'next/image';
 // pages/index.tsx
 import ThreeCanvasWrapper from '../components/ThreeCanvasWrapper'
 
@@ -28,7 +28,7 @@ export default function Home() {
       <div className="hidden sm:block">
         <nav className="flex justify-between" style={{ padding: '20px' }} >
           <div className="flex justify-start">
-            <img className="mx-auto block h-10 rounded-full sm:mx-0 sm:shrink-0" src="/img/home.jpg" alt="" />
+            <Image  className="mx-auto block h-10 rounded-full sm:mx-0 sm:shrink-0" src="/img/home.jpg" alt="" />
             <div className="">
               <p className=" font-medium text-lg antialiased  rounded-lg px-2 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">A Green Space</p>
 
