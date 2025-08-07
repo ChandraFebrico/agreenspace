@@ -1,8 +1,6 @@
-import Image from "next/image";
+
 // pages/index.tsx
 import ThreeCanvasWrapper from '../components/ThreeCanvasWrapper'
-import ThreeCanvasWrapper2 from '../components/ThreeCanvasWrapper2'
-import ThreeCanvasWrapper3 from '../components/ThreeCanvasWrapper3'
 
 
 export default function Home() {
@@ -72,7 +70,9 @@ export default function Home() {
       </div>
       <div className=" flex justify-end -mt-56">
         <div className="w-1/3 justify-items-center">
-          <ThreeCanvasWrapper />
+          <main>
+            <ThreeCanvasWrapper />
+          </main>
         </div>
       </div>
     </div>
