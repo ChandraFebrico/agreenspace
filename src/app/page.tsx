@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <nav className="block sm:hidden flex justify-around " style={{ padding: '20px' }} >
         <div className="flex justify-start">
-          <img className="mx-auto block h-10 rounded-full sm:mx-0 sm:shrink-0" src="/img/home.jpg" alt="" />
+          <Image className="mx-auto block h-10 rounded-full sm:mx-0 sm:shrink-0" src="/img/home.jpg" alt="" />
         </div>
         <div className="flex justify-end">
           <a href="/dashboard" className="font-medium sm:font-xs rounded-lg px-2 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">
@@ -63,9 +63,9 @@ export default function Home() {
             <button className="p-2 text-stone-50 rounded-md bg-lime-950 hover:bg-green-900 ">Shop Now</button></div>
         </div>
         <div className="p-2">
-          <img width={500}  // Width in pixels
+          <Image width={500}  // Width in pixels
             height={500} // Height in pixels
-            className="rounded-md" src="/img/1.jpg" ></img>
+            className="rounded-md" src="/img/1.jpg" alt="" />
         </div>
       </div>
       <div className=" flex justify-end -mt-56">
