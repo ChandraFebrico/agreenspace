@@ -74,8 +74,12 @@ export default function Home() {
             </p>
           </div>
           <div className="col-span-2 ">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </p></div>
+            <h1 className='font-bold'>🌿 Transparent Wall-Mount Plant Holder</h1><br />
+            <p>
+              Let your plant take the spotlight. <br /><br />
+
+              Crafted for lovers of clean aesthetics and modern greenery, this transparent wall-mount plant holder creates the illusion that your plant is floating—turning it into living wall art. Whether you're showcasing a staghorn fern, orchid, or kokedama, the minimal design blends effortlessly into any interior.
+            </p></div>
           <div className="col-span-1 ">
             <button className="p-2 text-stone-50 rounded-md bg-lime-950 hover:bg-green-900 ">Shop Now</button></div>
         </div>
@@ -92,7 +96,7 @@ export default function Home() {
           </main>
         </div>
       </div>
-      
+
     </div>
   );
 }
