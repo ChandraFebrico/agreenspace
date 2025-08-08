@@ -39,7 +39,7 @@ export default function Home() {
         <div className="flex justify-center p-8  mt-20">
           <div className="w-1/2 p-12 grid grid-flow-col grid-rows-3 gap-4 ">
             <div className="col-span-2">
-              <p className="text-6xl">
+              <p className="text-6xl font-empirez leading-[1.3]">
                 <span className="inline-block overflow-hidden whitespace-nowrap animate-typing1">
                   <span className="inline-block border-r-2 border-black pr-1 animate-cursor">
                     We craft <a className="font-bold text-sky-600 underline decoration-sky-500/30">spaces</a>,
@@ -53,8 +53,8 @@ export default function Home() {
               </p>
             </div>
             <div className="col-span-2 ">
-              <h1 className='font-bold'>🌿 Transparent Wall-Mount Plant Holder</h1><br />
-              <p>
+              <h1 className='text-2xl font-hikasami'>🌿 Transparent Wall-Mount Plant Holder</h1><br />
+              <p className='font-hikasami'>
                 Let your plant take the spotlight. <br /><br />
 
                 Crafted for lovers of clean aesthetics and modern greenery, this transparent wall-mount plant holder creates the illusion that your plant is floating—turning it into living wall art. Whether you&apos;re showcasing a staghorn fern, orchid, or kokedama, the minimal design blends effortlessly into any interior.
@@ -107,7 +107,7 @@ export default function Home() {
         <div className="flex justify-start p-8  mt-20">
           <div className="p-4 grid grid-flow-rows grid-rows-1 gap-4 ">
             <div className="col-span-1">
-              <p className="text-2xl">
+              <p className="text-2xl font-empirez leading-[1.5]">
                 <span className="inline-block overflow-hidden whitespace-nowrap animate-typing1">
                   <span className="inline-block border-r-2 border-black pr-1 animate-cursor">
                     We craft <a className="font-bold text-sky-600 underline decoration-sky-500/30">spaces</a>,
@@ -125,8 +125,8 @@ export default function Home() {
                 < ZoomImage />
               </div>
             </div>
-            <div className="col-span-1 ">
-              <h1 className='font-bold'>🌿 Transparent Wall-Mount Plant Holder</h1><br />
+            <div className="col-span-1">
+              <h1 className='font-bold font-bold'>🌿 Transparent Wall-Mount Plant Holder</h1><br />
               <p>
                 Let your plant take the spotlight. <br /><br />
 

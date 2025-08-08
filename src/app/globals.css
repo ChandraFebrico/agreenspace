@@ -21,6 +21,20 @@
   }
 }
 
+@font-face {
+  font-family: 'Hikasami';
+  src: url('/fonts/Hikasami.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Empirez';
+  src: url('/fonts/Empirez.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
