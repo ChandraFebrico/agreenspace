@@ -1,7 +1,7 @@
 import Image from 'next/image';
 // pages/index.tsx
 import ThreeCanvasWrapper from '../components/ThreeCanvasWrapper'
-
+import ZoomImage from '../components/ZoomableImage'
 
 export default function Home() {
   return (
@@ -63,9 +63,11 @@ export default function Home() {
               <button className="p-2 text-stone-50 rounded-md bg-lime-950 hover:bg-green-900 ">Shop Now</button></div>
           </div>
           <div className="p-2 ">
-            <Image width={500}  // Width in pixels
-              height={500} // Height in pixels
-              className="rounded-md" src="/img/1.jpg" alt="" />
+            <div className="outline-2 outline-offset-2 outline-dashed">
+              <Image width={500}  // Width in pixels
+                height={500} // Height in pixels
+                className="rounded-md " src="/img/1.jpg" alt="" />
+            </div>
           </div>
         </div>
         <div className=" flex justify-end -mt-96 -ml-60">
@@ -119,9 +121,9 @@ export default function Home() {
               </p>
             </div>
             <div className="p-2 col-span-1 ">
-              <Image width={300}  // Width in pixels
-                height={300} // Height in pixels
-                className="rounded-md" src="/img/1.jpg" alt="" />
+              <div className="outline-2 outline-offset-2 outline-dashed">
+                < ZoomImage />
+              </div>
             </div>
             <div className="col-span-1 ">
               <h1 className='font-bold'>🌿 Transparent Wall-Mount Plant Holder</h1><br />

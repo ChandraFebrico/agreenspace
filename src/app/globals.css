@@ -92,3 +92,9 @@ body {
 .animate-cursor {
   animation: cursor 0.8s step-end infinite;
 }
+
+/* styles/globals.css or your component's CSS */
+.fade-mask {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+}
