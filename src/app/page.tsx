@@ -83,13 +83,13 @@ export default function Home() {
           <div className="col-span-1 ">
             <button className="p-2 text-stone-50 rounded-md bg-lime-950 hover:bg-green-900 ">Shop Now</button></div>
         </div>
-        <div className="p-2">
+        <div className="p-2 ">
           <Image width={500}  // Width in pixels
             height={500} // Height in pixels
             className="rounded-md" src="/img/1.jpg" alt="" />
         </div>
       </div>
-      <div className=" flex justify-end -mt-56 -ml-64">
+      <div className=" flex justify-end -mt-96 -ml-60">
         <div className="w-1/3 justify-items-center">
           <main>
             <ThreeCanvasWrapper />
