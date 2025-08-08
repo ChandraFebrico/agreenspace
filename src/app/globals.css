@@ -26,3 +26,69 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes typing1 {
+  0% {
+    width: 0
+  }
+
+  50% {
+    width: 100%
+  }
+
+  100% {
+    width: 100%
+  }
+}
+
+@keyframes typing2 {
+  0% {
+    width: 0
+  }
+
+  50% {
+    width: 0
+  }
+
+  100% {
+    width: 100%
+  }
+}
+
+@keyframes cursor {
+
+  0%,
+  100% {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: currentColor
+  }
+}
+
+.animate-typing1,
+.animate-typing2 {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation-timing-function: steps(30, end);
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.animate-typing1 {
+  animation-name: typing1;
+  animation-duration: 4s;
+}
+
+.animate-typing2 {
+  animation-name: typing2;
+  animation-duration: 4s;
+  animation-delay: 4s;
+}
+
+.animate-cursor {
+  animation: cursor 0.8s step-end infinite;
+}

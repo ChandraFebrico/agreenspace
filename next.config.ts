@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
 
+
+  // output: 'export',
+  // basePath: '/agreenspace',
+  // assetPrefix: '/agreenspace/',
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: '/agreenspace',
-  assetPrefix: '/agreenspace/',
 };
 
 export default nextConfig;

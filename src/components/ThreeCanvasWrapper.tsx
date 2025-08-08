@@ -11,11 +11,11 @@ const Model3 = dynamic(() => import('../components/Model'), { ssr: false })
 
 export default function ThreeCanvasWrapper() {
   return (
-    <div style={{ width: '50vw', height: '50vh' }}>
-      <Canvas camera={{ position: [0, 10, 20], fov: 58 }}>
+    <div style={{ width: '35vw', height: '60vh', zIndex: '10' }}>
+      <Canvas camera={{ position: [0, 10, 20], fov: 48 }}>
         <ambientLight intensity={0.7} />
         <directionalLight position={[20, 20, 5]} intensity={1} />
-        <Model3 position={[-1.5, 0, 0]} scale={0.8} />
+        <Model3 position={[-1, 0, 1]} scale={0.8} />
         <Model3 />
         <OrbitControls enableZoom={false}      // Disable panning (dragging up/down/left/right)
                             maxPolarAngle={Math.PI / 3} // Optional: Limit vertical rotation
