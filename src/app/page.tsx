@@ -78,7 +78,7 @@ export default function Home() {
             <p>
               Let your plant take the spotlight. <br /><br />
 
-              Crafted for lovers of clean aesthetics and modern greenery, this transparent wall-mount plant holder creates the illusion that your plant is floating—turning it into living wall art. Whether you're showcasing a staghorn fern, orchid, or kokedama, the minimal design blends effortlessly into any interior.
+              Crafted for lovers of clean aesthetics and modern greenery, this transparent wall-mount plant holder creates the illusion that your plant is floating—turning it into living wall art. Whether you&apos;re showcasing a staghorn fern, orchid, or kokedama, the minimal design blends effortlessly into any interior.
             </p></div>
           <div className="col-span-1 ">
             <button className="p-2 text-stone-50 rounded-md bg-lime-950 hover:bg-green-900 ">Shop Now</button></div>
