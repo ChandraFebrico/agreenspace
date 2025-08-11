@@ -70,11 +70,43 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=" flex justify-end -mt-96 -ml-60">
+        <div className="flex justify-end -mt-96 -ml-60">
           <div className="w-1/3 justify-items-center">
             <main>
               <ThreeCanvasWrapper />
             </main>
+          </div>
+        </div>
+
+        <div className='w-full  -mt-16 font-hikasami text-white' >
+          <div className='grid grid-cols-3 gap-4 '>
+            <div className='bg-green-900/50 rounded-md w-80 h-48 place-self-end'>
+              <div className='place-items-center -mt-32 p-2'>
+                <Image width={150}  // Width in pixels
+                  height={150} // Height in pixels
+                  className="rounded-md " src="/img/plant.png" alt="" />
+                <h1>🌿 Aloe Vera – Natural Skin Healer</h1>
+                <p className='text-sm mt-4 text-justify'>Nurtured in organic farms, our Aloe Vera plants are rich in antioxidants and hydration.</p>
+              </div>
+            </div>
+            <div className='bg-green-900/50 rounded-md w-80 h-48 place-self-center'>
+              <div className='place-items-center -mt-32 p-2'>
+                <Image width={150}  // Width in pixels
+                  height={150} // Height in pixels
+                  className="rounded-md " src="/img/plant.png" alt="" />
+                <h1>🌱 Snake Plant – Air-Purifying</h1>
+                <p className='text-sm mt-4 text-justify'>Stylish, sturdy, and nearly indestructible. The Snake Plant not only elevates your decor but also purifies your air.</p>
+              </div>
+            </div>
+            <div className='bg-green-900/50 rounded-md w-80 h-48 place-self-start'>
+              <div className='place-items-center -mt-32 p-2'>
+                <Image width={150}  // Width in pixels
+                  height={150} // Height in pixels
+                  className="rounded-md " src="/img/plant.png" alt="" />
+                <h1>🌸 Lavender – Calming Aromatherapy</h1>
+                <p className='text-sm mt-4 text-justify'>Bring relaxation home with our fragrant Lavender plants. Known for their soothing scent and beautiful purple blooms.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
