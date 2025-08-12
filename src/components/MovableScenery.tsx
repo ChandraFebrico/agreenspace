@@ -1,14 +1,17 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 export default function MovableBackground() {
   const mountRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!mountRef.current) return;
+
+    // ✅ Store the ref's current value immediately
+    const mountEl = mountRef.current;
 
     // Scene, Camera, Renderer
     const scene = new THREE.Scene();
@@ -20,14 +23,10 @@ export default function MovableBackground() {
     );
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0x000000, 0); // Transparent background
-    mountRef.current.appendChild(renderer.domElement);
+    renderer.setClearColor(0x000000, 0);
+    mountEl.appendChild(renderer.domElement);
 
-    // // Lighting
-    // const light = new THREE.AmbientLight(0xffffff, 1);
-    // scene.add(light);
-
-     // Lights
+    // Lights
     const sunlight = new THREE.DirectionalLight(0xffffff, 1);
     sunlight.position.set(10, 20, 10);
     sunlight.castShadow = true;
@@ -44,17 +43,16 @@ export default function MovableBackground() {
     // Load GLB model
     const loader = new GLTFLoader();
     loader.load(
-      '/models/Nature.glb',
+      "/models/Nature.glb",
       (gltf) => {
         scenery = gltf.scene;
-        scenery.scale.set(80, 80, 80); // Adjust to your liking
-        scenery.position.z = -50; // Push back so it acts as background
-        scenery.position.y = -20; // Push back so it acts as background
+        scenery.scale.set(80, 80, 80);
+        scenery.position.set(0, -20, -50);
         scene.add(scenery);
       },
       undefined,
       (error) => {
-        console.error('Error loading model:', error);
+        console.error("Error loading model:", error);
       }
     );
 
@@ -65,9 +63,9 @@ export default function MovableBackground() {
 
     const onMouseMove = (event: MouseEvent) => {
       mouseX = (event.clientX / window.innerWidth) * 2 + 1;
-      mouseY = -(event.clientY / window.innerHeight) * 2 + 1 ;
+      mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
     };
-    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener("mousemove", onMouseMove);
 
     // Animation loop
     const animate = () => {
@@ -75,7 +73,7 @@ export default function MovableBackground() {
 
       if (scenery) {
         scenery.position.x += (mouseX * 10 - scenery.position.x) * 0.02;
-        scenery.position.y += (mouseY * 5 - scenery.position.y ) * 0.02;
+        scenery.position.y += (mouseY * 5 - scenery.position.y) * 0.02;
       }
 
       renderer.render(scene, camera);
@@ -88,15 +86,14 @@ export default function MovableBackground() {
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
-    window.addEventListener('resize', onWindowResize);
+    window.addEventListener("resize", onWindowResize);
 
     // Cleanup
     return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('resize', onWindowResize);
-      if (mountRef.current) {
-        mountRef.current.removeChild(renderer.domElement);
-      }
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("resize", onWindowResize);
+      // ✅ Use the stored element for cleanup
+      mountEl.removeChild(renderer.domElement);
     };
   }, []);
 
@@ -104,11 +101,11 @@ export default function MovableBackground() {
     <div
       ref={mountRef}
       style={{
-        position: 'fixed',
+        position: "fixed",
         top: 0,
         left: 0,
-        width: '100%',
-        height: '100%',
+        width: "100%",
+        height: "100%",
         zIndex: -1, // Behind everything
       }}
     />

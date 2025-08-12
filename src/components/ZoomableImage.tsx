@@ -1,20 +1,25 @@
-"use client"; // <-- Add this at the very top
+"use client";
 
-import { JSX, useState } from "react";
+import { useState } from "react";
+import Image from "next/image";
 
-export default function ZoomableImage(): JSX.Element {
-  const [isZoomed, setIsZoomed] = useState<boolean>(false);
+export default function ZoomableImage() {
+  const [isZoomed, setIsZoomed] = useState(false);
 
   return (
     <div
       onClick={() => setIsZoomed(!isZoomed)}
-      className={` overflow-hidden cursor-zoom-in w-full h-[260px] transition-transform duration-500 ${
-        isZoomed ? "scale-150 cursor-zoom-out" : "scale-100"
+      className={`overflow-hidden w-full h-[260px] transition-transform duration-500 ${
+        isZoomed
+          ? "scale-150 cursor-zoom-out"
+          : "scale-100 cursor-zoom-in"
       }`}
     >
-      <img
+      <Image
         src="/img/1.jpg"
         alt="Zoom plant holder"
+        width={800} // Adjust based on your image
+        height={600}
         className="object-cover w-full h-full drop-shadow-xl/50"
       />
     </div>

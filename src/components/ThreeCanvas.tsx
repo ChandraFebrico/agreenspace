@@ -1,7 +1,7 @@
-'use client'; // Required if using Next.js App Router
+"use client"; // Required if using Next.js App Router
 
-import { useRef, useEffect } from 'react';
-import * as THREE from 'three';
+import { useRef, useEffect } from "react";
+import * as THREE from "three";
 
 export default function ThreeCanvas() {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -9,14 +9,17 @@ export default function ThreeCanvas() {
   useEffect(() => {
     if (!mountRef.current) return;
 
-    const width = mountRef.current.clientWidth;
-    const height = mountRef.current.clientHeight;
+    // ✅ Store ref value immediately so cleanup always has the same element
+    const mountEl = mountRef.current;
+
+    const width = mountEl.clientWidth;
+    const height = mountEl.clientHeight;
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
-    mountRef.current.appendChild(renderer.domElement);
+    mountEl.appendChild(renderer.domElement);
 
     const geometry = new THREE.BoxGeometry();
     const material = new THREE.MeshNormalMaterial();
@@ -34,7 +37,7 @@ export default function ThreeCanvas() {
     animate();
 
     return () => {
-      mountRef.current?.removeChild(renderer.domElement);
+      mountEl.removeChild(renderer.domElement); // ✅ Always the same element
     };
   }, []);
 
