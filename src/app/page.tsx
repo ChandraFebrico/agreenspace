@@ -2,12 +2,13 @@ import Image from 'next/image';
 // pages/index.tsx
 import ThreeCanvasWrapper from '../components/ThreeCanvasWrapper'
 import ZoomImage from '../components/ZoomableImage'
+import MovableScenery from '@/components/MovableScenery';
 
 export default function Home() {
   return (
     <div>
       {/* //Website View */}
-      <div className="hidden sm:block bg-[url('/img/background.jpg')] bg-cover bg-center bg-fixed h-screen">
+      <div className="hidden sm:block ">
         {/* //Showing Navigation */}
         <div className="hidden sm:block">
           <nav className="flex justify-between fixed top-0 left-0 w-full shadow z-50 " style={{ padding: '20px' }} >
@@ -52,7 +53,7 @@ export default function Home() {
                 </span>
               </p>
             </div>
-            <div className="col-span-2 ">
+            <div className="text-white col-span-2 bg-slate-800/50 rounded-md p-2">
               <h1 className='text-2xl font-hikasami'>🌿 Transparent Wall-Mount Plant Holder</h1><br />
               <p className='font-hikasami'>
                 Let your plant take the spotlight. <br /><br />
@@ -70,17 +71,17 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex justify-end -mt-96 -ml-60">
+        {/* <div className="flex justify-end -mt-96 -ml-60">
           <div className="w-1/3 justify-items-center">
             <main>
               <ThreeCanvasWrapper />
             </main>
           </div>
-        </div>
+        </div> */}
 
         <div className='w-full  -mt-16 font-hikasami text-white' >
           <div className='grid grid-cols-3 gap-4 '>
-            <div className='bg-green-900/50 rounded-md w-80 h-48 place-self-end'>
+            <div className='bg-slate-800/50 rounded-md w-80 h-48 place-self-end'>
               <div className='place-items-center -mt-32 p-2'>
                 <Image width={150}  // Width in pixels
                   height={150} // Height in pixels
@@ -89,7 +90,7 @@ export default function Home() {
                 <p className='text-sm mt-4 text-justify'>Nurtured in organic farms, our Aloe Vera plants are rich in antioxidants and hydration.</p>
               </div>
             </div>
-            <div className='bg-green-900/50 rounded-md w-80 h-48 place-self-center'>
+            <div className='bg-slate-800/50 rounded-md w-80 h-48 place-self-center'>
               <div className='place-items-center -mt-32 p-2'>
                 <Image width={150}  // Width in pixels
                   height={150} // Height in pixels
@@ -98,7 +99,7 @@ export default function Home() {
                 <p className='text-sm mt-4 text-justify'>Stylish, sturdy, and nearly indestructible. The Snake Plant not only elevates your decor but also purifies your air.</p>
               </div>
             </div>
-            <div className='bg-green-900/50 rounded-md w-80 h-48 place-self-start'>
+            <div className='bg-slate-800/50 rounded-md w-80 h-48 place-self-start'>
               <div className='place-items-center -mt-32 p-2'>
                 <Image width={150}  // Width in pixels
                   height={150} // Height in pixels
@@ -108,6 +109,11 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        <div>
+          <main>
+            <MovableScenery />
+          </main>
         </div>
       </div>
 
