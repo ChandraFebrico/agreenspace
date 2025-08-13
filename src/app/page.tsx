@@ -1,19 +1,18 @@
 import Image from 'next/image';
+import LoadingScreen from "@/components/LoadingScreen";
 // pages/index.tsx
 // import ThreeCanvasWrapper from '../components/ThreeCanvasWrapper'
 // import ZoomImage from '../components/ZoomableImage'
 import MovableScenery from '@/components/MovableScenery';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
-import { faMouse } from '@fortawesome/free-solid-svg-icons/faMouse';
+import TextFadeOnScroll from "@/components/TextFadeOnScroll";
 
 export default function Home() {
-  
+
   return (
-    
-    <div>
-      {/* //Website View */}
-      {/* <div className="hidden sm:block "> */}
+    <LoadingScreen>
+      <div>
+        {/* //Website View */}
+        {/* <div className="hidden sm:block "> */}
         <nav className="flex justify-between fixed top-0 left-0 w-full shadow z-50 " style={{ padding: '20px' }} >
           <div className="flex justify-start">
             <Image width={40}  // Width in pixels
@@ -41,37 +40,10 @@ export default function Home() {
         {/* Navigation end */}
 
         {/* First Grid */}
-        <div className="flex justify-center p-8">
-          <div className="p-12 grid grid-flow-col grid-rows-3 gap-1 ">
-            <div className='h-auto '>
-              <p className="text-6xl font-empirez leading-[1.3]">
-                <span className="inline-block overflow-hidden whitespace-nowrap animate-typing1">
-                  <span className="inline-block border-r-2 border-black pr-1 animate-cursor">
-                    We craft <a className="font-bold text-sky-600 underline decoration-sky-500/30">spaces</a>,
-                  </span>
-                </span><br />
-                <span className="inline-block overflow-hidden whitespace-nowrap animate-typing2">
-                  <span className="inline-block border-r-2 border-lime-600 pr-1 animate-cursor">
-                    you <a className="font-bold text-lime-600 underline decoration-lime-500/30">plant</a> joy
-                  </span>
-                </span>
-              </p>
-            </div>
-            <div className="text-white font-hikasami p-2 text-4xl mt-32">
-              <h1>Discover our product below.</h1>
-            </div>
-            <div className="text-white font-hikasami p-2 place-items-center">
-              <br />
-              <h1 className='text-sm'>SCROLL DOWN</h1>
-              <br />
-              <FontAwesomeIcon icon={faMouse} className="text-white text-sm w-8 h-8" size="2x" />
-              <FontAwesomeIcon icon={faAngleDoubleDown} className="text-white text-sm w-8 h-8" size="2x" />
-              
-            </div>
-          </div>
-        </div>
+        <TextFadeOnScroll />
 
-        <div className='w-full font-hikasami text-white' >
+
+        <div className='w-full font-hikasami text-white mt-24' >
           <div className='grid grid-cols-3 gap-4 '>
             <div className='bg-slate-800/50 rounded-md w-80 h-48 place-self-end'>
               <div className='place-items-center -mt-32 p-2'>
@@ -107,10 +79,10 @@ export default function Home() {
             <MovableScenery />
           </main>
         </div>
-      {/* </div> */}
+        {/* </div> */}
 
-      {/* //Mobile View */}
-      {/* <div className="block sm:hidden bg-[url('/img/backgroundmb.jpg')] bg-cover bg-center bg-fixed h-screen">
+        {/* //Mobile View */}
+        {/* <div className="block sm:hidden bg-[url('/img/backgroundmb.jpg')] bg-cover bg-center bg-fixed h-screen">
         <nav className="flex justify-around fixed top-0 left-0 w-full shadow z-50 bg-gray-100/50 " style={{ padding: '20px' }} >
           <div className="flex justify-start">
             <Image width={40}  // Width in pixels
@@ -175,6 +147,7 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-    </div>
+      </div>
+    </LoadingScreen>
   );
 }
