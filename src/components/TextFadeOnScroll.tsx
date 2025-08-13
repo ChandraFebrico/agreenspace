@@ -45,7 +45,7 @@ export default function TextFadeOnScroll() {
                     </div>
 
                     {/* Row 2: Subtitle */}
-                    <div className="row-span-1 text-white font-hikasami p-2 text-4xl flex items-center">
+                    <div className="row-span-1 text-white font-hikasami p-2 text-4xl flex items-center mt-10">
                         <h1>Discover our product below.</h1>
                     </div>
 
